@@ -121,28 +121,51 @@
     $i++;
   }
 
+  // #10 comparisons & booleans (true or false)
+  //echo true // echo's "1"
+  //echo false // echo's ""
+  // numbers
+  //echo 5 < 10;
+  //echo 5 > 10;
+  //echo 5 == 10;
+  //echo 10 == 10;
+  //echo 5 != 10;
+  // echo 5 <= 5;
+  // echo 5 >= 5;
+  // strings
+  //echo 'shaun' < 'yoshi';
+  //echo 'shaun' > 'yoshi';
+  //echo 'shaun' > 'Shaun';
+  //echo 'mario' == 'mario';
+  //echo 'mario' == 'Mario';
+  // loose vs strict equal comparison
+  //echo 5 == '5';
+  //echo 5 === '5';
+  //echo 5 === 5;
+  //echo true == 1;
+  //echo false == "";
+  //echo true === 1;
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My first php file</title>
+  <title>Document</title>
 </head>
 <body>
-  <h1><?php echo 'hello';?></h1>
+<h1><?php echo 'hello';?></h1>
 
-  <div><?php echo NAME; ?></div>
-  <div><?php echo $name; ?></div>
-  <div><?php echo $age; ?></div>
-  <h1>Products</h1>
-  <ul>
-    <?php foreach($products as $product){ ?>
-      <h3><?php echo $product['name']; ?></h3>
-      <p>£<?php echo $product['price']; ?></p>
-    <?php } ?>
-  </ul>
+<div><?php echo NAME; ?></div>
+<div><?php echo $name; ?></div>
+<div><?php echo $age; ?></div>
+<h1>Products</h1>
+<ul>
+  <?php foreach($products as $product){ ?>
+    <h3><?php echo $product['name']; ?></h3>
+    <p>£<?php echo $product['price']; ?></p>
+  <?php } ?>
+</ul>
 </body>
 </html>
