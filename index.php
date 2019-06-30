@@ -8,6 +8,7 @@
   echo "<br>";
 
   // #5
+  echo "<h2>String</h2><br>";
   $stringOne = 'my email is';
   $stringTwo = 'mario123@gogole.com';
   // echo $stringOne . $stringTwo;
@@ -27,8 +28,8 @@
   echo strtolower($name);
   echo str_replace('m', 'w', $name);
 
-  echo "<br>";
   // #6 Numbers
+  echo "<br><h2>Numbers</h2><br>";
   $radius = 25;
   $pi = 3.14;
   // basic operators - *, /, +, -, ^
@@ -48,9 +49,9 @@
   echo floor($pi);
   echo ceil($pi);
   echo pi();
-  echo "<br>";
 
   // #7 indexed arrays
+  echo "<br><h2>Indexed arrays</h2><br>";
   $peopleOne = ['shaun', 'crystal', 'ryu'];
   //echo $peopleOne[1];
   $peopleTwo = array('ken', 'chun-li');
@@ -79,6 +80,7 @@
   print_r($ninjasThree);
 
   // #8 multidimensional array
+  echo "<br><h2>Multidimensional arrays</h2><br>";
   $blogs = [
     ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem'],
     ['title' => 'mariokart cheats', 'author' => 'toad', 'content' => 'lorem'],
@@ -91,10 +93,11 @@
   $blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem'];
   //print_r($blogs);
   $popped = array_pop($blogs);
-  //print_r($popped);
+  print_r($popped);
 
 
   // #9 Loops
+  echo "<br><h2>Loops</h2><br>";
     $ninjas = ['shaun', 'ryu', 'yoshi'];
   // for($i = 0; $i < count($ninjas); $i++){
   //   echo $ninjas[$i] . '<br />';
@@ -114,14 +117,15 @@
   //   echo $product['name'] .' - '. $product['price'];
   //   echo '<br />';
   // }
-  // $i = 0;
-  // while($i < count($products)){
-  //   echo $products[$i]['name'];
-  //   echo '<br />';
-  //   $i++;
-  // }
+  $i = 0;
+  while($i < count($products)){
+    echo $products[$i]['name'];
+    echo '<br />';
+    $i++;
+  }
 
   // #10 comparisons & booleans (true or false)
+  echo "<br><h2>Booleans</h2><br>";
   //echo true // echo's "1"
   //echo false // echo's ""
   // numbers
@@ -147,6 +151,7 @@
   //echo true === 1;
 
   // #11,12 Conditional statements
+  echo "<br><h2>Conditional statements</h2><br>";
   // $price = 20;
   // if($price < 30){
   //   echo 'if condition met';
@@ -170,6 +175,24 @@
     }
     echo $product['name'] . '<br />';
   }
+
+  // #13 functions
+  echo "<br><h2>Functions</h2><br>";
+  function sayHello($name = 'shaun', $time = 'morning'){
+    echo "Good $time, $name";
+  }
+  // sayHello();
+  // sayHello('mario');
+  sayHello('yoshi', 'night');
+  echo "<br>";
+  function formatProduct($product){
+    // echo "{$product['name']} costs £{$product['price']} to buy <br />";
+    return "The {$product['name']} costs £{$product['price']} to buy <br />";
+  }
+  // formatProduct(['name' => 'gold star', 'price' => 20]);
+  $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
+  echo $formatted;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
