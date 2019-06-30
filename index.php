@@ -222,6 +222,13 @@
   }
   sayBye($name);
   echo $name;
+
+  // #15 Include & Require
+  echo "<br><h2>Include & Require</h2><br>";
+  include('./ninjas.php');
+  require('./ninjas.php');
+  include 'ninjas.php';
+  require 'ninjas.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
