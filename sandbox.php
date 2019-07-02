@@ -16,6 +16,15 @@
   echo $_SERVER['SCRIPT_FILENAME'] . '<br />';
   echo $_SERVER['PHP_SELF'] . '<br />';
 
+  // #36 Sessions
+  if(isset($_POST['submit'])) {
+    session_start();
+
+    $_SESSION['name'] = $_POST['name'];
+
+    // echo $_SESSION['name'];
+    // header('Location: index.php');
+  }
 ?>
 
 <!DOCTYPE html>
@@ -28,5 +37,9 @@
 </head>
 <body>
   <h2><?php echo $score > 40 ? 'high score!' : 'low score!'; ?></h2>
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    <input type="text" name="name">
+    <input type="submit" name="submit" value="submit">
+  </form>
 </body>
 </html>
