@@ -1,4 +1,4 @@
 <?php
-	$ninjas = ['shaun', 'ryu', 'yoshi'];
-	echo $ninjas[1] . '<br />';
+  $ninjas = ['shaun', 'ryu', 'yoshi'];
+  echo $ninjas[1] . '<br />';
 ?>
